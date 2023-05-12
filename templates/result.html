@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type=submit]:hover {background-color: #45a049}
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 17%);
+      grid-gap: 10px;
+      justify-content: center;
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .grid-group {
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .containercust {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        gap: 0px 15px; 
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .lcont,
+    .rcont {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .lcont {
+      background-color: #f0f0f0;
+    }
+
+    .rcont {
+      background-color: #d0d0d0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="w3-top">
+      <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" onclick="window.location.href = 'index.html';">Home</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white" onclick="window.location.href = 'helppage.html';">Results</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" onclick="window.location.href = 'helppage.html';">FAQ</a>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-padding-64 w3-container">
+
+      <div class="containercust">
+        <div class="lcont">
+          <h1>Image Processing Result</h1>
+          <img src="{{ url_for('static', filename='input.png') }}" alt="Processed Image">
+          <br><br>
+        </div>
+
+        <div class="rcont">
+          {% for grid_num in range(grid_len)%}
+          <div class="grid-group">
+            <h2>{{ name_data[grid_num] }}</h2>
+            <div class="grid-container">
+              {% for image in grid_data[grid_num] %}
+                <div class="grid-item">
+                  <a href="{{ image.link }}"><img src="{{ image.src }}"></a>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

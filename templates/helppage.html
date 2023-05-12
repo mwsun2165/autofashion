@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type=submit]:hover {background-color: #45a049}
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="w3-top">
+      <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" onclick="window.location.href = 'index.html';">Home</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" onclick="window.location.href = 'result.html';">Results</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white" onclick="window.location.href = 'helppage.html';">FAQ</a>
+      </div>
+        <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Recommendations</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">FAQ</a>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <h1 class="faq-heading">Frequently Asked Questions</h1>
+      <section class="faq-container">
+        <div class="faq-one">
+          <!-- faq question -->
+          <h1 class="faq-page">What does this app do?</h1>
+          <!-- faq answer -->
+          <div class="faq-body">
+            <p>See really attractive clothing but don't know where to find it for yourself? Struggling to find the right clothes for a party? You're in the right place! Our fashion detector app is able to </p>
+          </div>
+        </div>
+        <hr class="hr-line">
+        <div class="faq-two">
+        <!-- faq question -->
+          <h1 class="faq-page">How do I use this app?</h1>
+          <!-- faq answer -->
+          <div class="faq-body">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit saepe sequi, illum facere
+                      necessitatibus cum aliquam id illo omnis maxime, totam soluta voluptate amet ut sit ipsum
+                      aperiam.
+                      Perspiciatis, porro!</p>
+          </div>
+        </div>
+        <hr class="hr-line">
+        <div class="faq-three">
+        <!-- faq question -->
+          <h1 class="faq-page">Still having issues?</h1>
+          <!-- faq answer -->
+          <div class="container">
+            <form action="action_page.php">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
