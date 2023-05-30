@@ -1,6 +1,6 @@
-# Project Title
+# AutoFashion - Automated Fashion Detection and Recommendation
 
-This README provides instructions on how to install and run this Python-based Flask project. The application is designed to accept image inputs from users and process them.
+This is Hyunjae Chung and Michael Sun's senior research lab project for Computer Systems Lab 2022-2023 under Dr. Yilmaz period 4. This app utilizes YOLOv5m convolutional neural network models in the backend and is combined with a user-friendly Flask frontend.
 
 ## Prerequisites
 
@@ -21,3 +21,36 @@ Firstly, clone the repository to your local machine using the following command:
 ```bash
 git clone <repository_url>
 ```
+
+### 2. Create and Activate a Virtual Environment
+Navigate into the project directory and create a virtual environment using the venv module:
+
+```bash
+cd <project_directory>
+python3 -m venv venv
+```
+
+and then activate the virtual environment (Windows):
+
+```bash
+venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+Install the necessary dependencies for the project using the requirements.txt file:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Flask Application:
+Now you're ready to run the Flask application. Set the FLASK_APP environment variable and run the application:
+
+```bash
+set FLASK_APP=app
+flask run
+```
+
+### 5. Open the Application on Browser
+
+The website will be hosted on '**http://127.0.0.1:5000/**' or '**localhost**'. Open either of the links on browser, and it should be there.
