@@ -1,6 +1,6 @@
 # AutoFashion - Automated Fashion Detection and Recommendation
 
-This is Hyunjae Chung and Michael Sun's senior research lab project for Computer Systems Lab 2022-2023 under Dr. Yilmaz Period 4. This app utilizes YOLOv5m convolutional neural network models in the backend and is combined with a user-friendly Flask frontend. The code files available in the main folder are a part of the full project, and files under the "Preliminary Code" folder are code we wrote prior to/during the process of creating AutoFashion, but are not a part of the final product itself.
+This is Hyunjae Chung and Michael Sun's senior research lab project for Computer Systems Lab 2022-2023 under Dr. Yilmaz Period 4. This app utilizes YOLOv5m convolutional neural network models in the backend and is combined with a user-friendly Flask frontend. The code files available in the main folder are a part of the full project, and files under the "Preliminary Code" folder are snippets/examples of code we wrote prior to/during the process of creating AutoFashion, but are not a part of the final product itself.
 
 ## Prerequisites
 
