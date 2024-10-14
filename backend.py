@@ -8,6 +8,8 @@ from bs4 import BeautifulSoup
 import re
 import json
 import urllib.request
+from dotenv import load_dotenv
+load_dotenv()
 
 cdlist = ["undef", "Anorak", "Blazer", "Blouse", "Bomber", "Button-Down", "Cardiagn", "Flannel", "Halter", "Henley", "Hoodie", "Jacket", "Jersey", "Parka", "Peacoat", "Poncho", "Sweater", "Tank", "Tee", "Top", "Turtleneck", "Capris", "Chinos", "Culottes", "Cutoffs", "Gauchos", "Jeans", "Jeggings", "Jodhpurs", "Joggers", "Leggings", "Sarong", "Shorts", "Skirt", "Sweatpants", "Sweatshorts", "Trunks", "Caftan", "Cape", "Coat", "Coverup", "Dress", "Jumpsuit", "Kaftan", "Kimono", "Nightdress", "Onesie", "Robe", "Romper", "Shirtdress", "Sundress"]
 ldlist = ["Under Armour", "Reebok", "Nike", "undef", "Columbia", "Adidas"]
@@ -88,7 +90,7 @@ for i in clist:
                 break
 
 
-openai.api_key = "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"
+openai.api_key = os.getenv('openai_key')
 model_engine = "text-davinci-002"
 
 def generate_text(prompt):
